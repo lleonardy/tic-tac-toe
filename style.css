@@ -1,0 +1,100 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+}
+
+h1 {
+    padding: 0;
+    margin: 0;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid rgb(197, 197, 197);
+    border-radius: 1rem;
+    box-shadow: 0px 4px 50px 1px rgba(0, 0, 0, 0.02);
+    padding: 0 4rem;
+    box-sizing: border-box;
+    background-color: rgb(252, 252, 252);
+}
+
+.header {
+    padding: 2rem;
+    box-sizing: border-box;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.status {
+    text-align: center;
+}
+
+.status.x {
+  color: green;
+}
+
+.status.o {
+  color: red;
+}
+
+
+.board {
+    background-color: rgb(252, 252, 252);
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    gap: 12px;
+    /* border: 1px solid black; */
+}
+
+.cell {
+    width: 100px;
+    height: 100px;
+    background-color: white;
+    display: grid;
+    place-items: center;
+    font-size: 2.5rem;
+    cursor: pointer;
+    border: 1px solid;
+    border-image: linear-gradient(-20deg, rgba(0, 0, 0, 0.479), rgb(245, 245, 245)) 1;
+    border-image-slice: 1;
+    transition: background-color 0.15s ease;
+}
+
+.cell.x {
+  color: green;
+}
+
+.cell.o {
+  color: red;
+}
+
+.cell:hover {
+    background-color: rgb(248, 248, 248);
+}
+
+.footer {
+    padding: 2rem;
+    box-sizing: border-box;
+}
+
+button {
+    padding: 0.6rem 1.8rem;
+    border: 1px solid rgb(172, 172, 172);
+    border-radius: 0.4rem;
+    font-weight: bold;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.05);
+    transition: background-color 0.2s ease;
+}
+
+button:hover {
+    background-color: rgb(230, 230, 230);
+}
